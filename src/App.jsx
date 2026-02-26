@@ -1,20 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Events from './Components/Events'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar";
+import Events from "./components/Events";
+import EventDetails from "./components/EventDetails";
+import AddEvent from "./components/AddEvent";
+import UpdateEvent from "./components/updateEvent";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Events/>
-      {/* <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-    </>
-  )
+    <Router>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Events />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventDetails />} />
+        <Route path="/add-event" element={<AddEvent />} />
+        <Route path="/update-event/:id" element={<UpdateEvent />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
