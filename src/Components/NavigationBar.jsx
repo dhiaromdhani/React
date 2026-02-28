@@ -8,7 +8,7 @@ const NavigationBar = () => {
         <Link className="navbar-brand" to="/">EventApp</Link>
         <div className="navbar-nav">
           <Link className="nav-link" to="/events">Événements</Link>
-          <Link className="nav-link btn btn-success text-white ms-2" to="/add-event">
+          <Link className= "nav-link" to="/add-event">
             Add new Event
           </Link>
         </div>

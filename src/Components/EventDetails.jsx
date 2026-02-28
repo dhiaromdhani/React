@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getallEvents } from "../services/api";
+import { getallEvents } from "../service/api";
 
 const EventDetails = () => {
   const { id } = useParams();

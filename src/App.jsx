@@ -1,23 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavigationBar from "./components/NavigationBar";
-import Events from "./components/Events";
-import EventDetails from "./components/EventDetails";
-import AddEvent from "./components/AddEvent";
-import UpdateEvent from "./components/updateEvent";
+import React, { Suspense } from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 function App() {
   return (
-    <Router>
-      <NavigationBar />
-      <Routes>
-        <Route path="/" element={<Events />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/events/:id" element={<EventDetails />} />
-        <Route path="/add-event" element={<AddEvent />} />
-        <Route path="/update-event/:id" element={<UpdateEvent />} />
-      </Routes>
-    </Router>
+    <Suspense fallback={<div className="text-center mt-5">Chargement...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { getallEvents } from "../service/api";
-import { deleteEvent } from "../services/api";
+import { deleteEvent } from "../service/api";
 
 function event({ event, buy, toggleLike, onDelete }) {
   const [events, setEvents] = useState([]);
@@ -31,6 +31,7 @@ function event({ event, buy, toggleLike, onDelete }) {
         <h2>Events List</h2>
         {events.map((event) => (
           <div key={event.id}>
+            <img src={`/image/${event.img}`} className="card-img-top" />
             <h4>{event.title}</h4>
             <p>{event.date}</p>
             <Link to={`/events/${event.id}`} className="btn btn-primary me-2">

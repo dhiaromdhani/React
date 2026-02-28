@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { addEvent } from "../services/api";
+import { addEvent } from "../service/api";
 
 const AddEvent = () => {
   const navigate = useNavigate();

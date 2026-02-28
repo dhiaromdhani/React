@@ -15,5 +15,31 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "events": [
+    {
+      "id": 1,
+      "title": "Event 1",
+      "description": "A conference about React",
+      "date": "2026-02-20",
+      "location": "Location 1",
+      "img": "event1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Event 2",
+      "description": "A conference about React",
+      "date": "2026-03-15",
+      "location": "Location 2",
+      "img": "event2.jpg"
+    },
+    {
+      "title": "dhia",
+      "description": "romdhane",
+      "date": "2002-06-19",
+      "location": "Metline",
+      "id": 3,
+      "img": "event3.jpg"
+    }
+  ]
 }

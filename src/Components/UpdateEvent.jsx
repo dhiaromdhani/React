@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { getallEvents, editEvent } from "../services/api";
+import { getallEvents, editEvent } from "../service/api";
 
 const UpdateEvent = () => {
   const { id } = useParams();
